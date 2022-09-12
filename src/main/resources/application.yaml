@@ -1,0 +1,32 @@
+server:
+  port: 4000
+  shutdown: "graceful"
+  servlet:
+    context-path: "/api"
+
+springdoc:
+  packages-to-scan: "org.thomas"
+  api-docs:
+    path: "/internal/api-docs"
+  swagger-ui:
+    path: "/internal/swagger.html"
+
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: "1m"
+  datasource:
+    url: "jdbc:postgresql://138.3.255.3:19765/mini"
+    username: "mini"
+    password: "FekziN62c7Gc5N3VArAGqdTu"
+    driver-class-name: "org.postgresql.Driver"
+  jpa:
+    database: "POSTGRESQL"
+    database-platform: "org.hibernate.dialect.PostgreSQLDialect"
+    properties:
+      hibernate:
+        naming_strategy: "org.hibernate.cfg.EJB3NamingStrategy"
+        format_sql: true
+        ddl-auto: none
+        temp:
+          use_jdbc_metadata_defaults: false
+    show-sql: false

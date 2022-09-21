@@ -6,7 +6,7 @@ import java.util.*
 
 @JsonNaming(PropertyNamingStrategies.SnakeCaseStrategy::class)
 data class UserDTO(
-    val id: Int,
+    val id: Int?,
     val email: String,
     val username: String,
     val password: String?,

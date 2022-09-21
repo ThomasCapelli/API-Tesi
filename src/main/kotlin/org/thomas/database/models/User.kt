@@ -12,11 +12,11 @@ data class User(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Int,
-    val email: String,
-    val username: String,
+    var email: String,
+    var username: String,
     val password: String?,
     @Column(name = "birth_date")
-    val birthDate: Date?,
+    var birthDate: Date?,
     @Column(name = "created_at")
     val createdAt: Date,
     @Column(name = "updated_at")
